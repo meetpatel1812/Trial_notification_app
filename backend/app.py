@@ -1,14 +1,15 @@
 from flask import Flask, request, jsonify
 from supabase import create_client, Client
-from config import SUPABASE_URL, SUPABASE_KEY, VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, VAPID_SUBJECT
+import os
+
 app = Flask(__name__)
 
-# Supabase configuration
-# SUPABASE_URL = "your-supabase-url"
-# SUPABASE_KEY = "your-supabase-key"
+# Access environment variables
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-@app.route("/send-notification", methods=["POST"])
+@app.route("/api/send-notification", methods=["POST"])
 def send_notification():
     data = request.json
     title = data.get("title")
@@ -22,5 +23,5 @@ def send_notification():
 
     return jsonify({"status": "success", "message": "Notification sent"})
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# Vercel requires a `handler` for serverless functions
+handler = app
