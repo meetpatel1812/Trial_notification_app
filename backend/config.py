@@ -1,0 +1,8 @@
+# Supabase Credentials
+SUPABASE_URL = "https://lsscrtjyrvhozdctytts.supabase.co"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxzc2NydGp5cnZob3pkY3R5dHRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA2MTE3MjgsImV4cCI6MjA1NjE4NzcyOH0.AvlkcodKz3MhE0bVtHFNRhZcOATsNchmEHm_UKUABk8"
+
+# VAPID Keys (Generate using web-push)
+VAPID_PUBLIC_KEY = "BI6s5qlARyKMXlZjIyBU7etE205QkPjKdiOmbdo7LjFQExCFrEO39SXQquv1HBga_o_z25G14kyHm174Nn9QGls"
+VAPID_PRIVATE_KEY = "nGXuFY4cFd7QS89EhQNRJhPwvksMgfSMvDYrTd8cCZo"
+VAPID_SUBJECT = "mailto:meetpatelcompany@email.com"
